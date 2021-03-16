@@ -49,23 +49,23 @@ cp build/hamcore.se2 build/libcedar.so build/libmayaqua.so build/vpncmd /opt/sof
 Place a daily cronjob to rotate the logs
 ```shell
 cp .zhaow-de/cron-softether-logs /etc/cron.daily/softether-logs
-chmox +x /etc/cron.daily/softether-logs
+chmod +x /etc/cron.daily/softether-logs
 ```
 
 For VPN server:
 ```shell
 cp .zhaow-de/softether-vpnserver.service /etc/systemd/system/
-sysctl enable softether-vpnserver
+systemctl enable softether-vpnserver
 ```
 
 For VPN bridge:
 ```shell
 cp .zhaow-de/softether-vpnbridge.service /etc/systemd/system/
-sysctl enable softether-vpnbridge
+systemctl enable softether-vpnbridge
 ```
 
 For VPN client:
 ```shell
 cp .zhaow-de/softether-vpnclient.service /etc/systemd/system/
-sysctl enable softether-vpnclient
+systemctl enable softether-vpnclient
 ```
