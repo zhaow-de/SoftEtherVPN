@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find /opt/softether/ -type f -name '*.log' -mtime 1 |xargs --no-run-if-empty gzip
+find /opt/softether/ -type f -name '*.gz' -mtime 30 |xargs --no-run-if-empty rm -f

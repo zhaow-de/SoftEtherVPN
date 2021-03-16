@@ -560,7 +560,7 @@ PPP_SESSION *NewPPPSession(CEDAR *cedar, IP *client_ip, UINT client_port, IP *se
 	// Data structure initialization
 	p = ZeroMalloc(sizeof(PPP_SESSION));
 
-	p->EnableMSCHAPv2 = true;
+	p->EnableMSCHAPv2 = false;
 	p->AuthProtocol = PPP_UNSPECIFIED;
 	p->MsChapV2_ErrorCode = 691;
 	p->EapClient = NULL;
